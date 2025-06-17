@@ -1,4 +1,3 @@
-import time
 import nidaqmx
 from nidaqmx.constants import LineGrouping, TerminalConfiguration
 

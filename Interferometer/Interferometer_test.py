@@ -1,0 +1,18 @@
+from Interferometer.Interferometer import Interferometer
+
+interferometer = Interferometer()
+print(interferometer.ready())
+print(interferometer.mode())
+print(interferometer.sweeping())
+print(interferometer.ROI_left())
+print(interferometer.ROI_right())
+print(interferometer.scan_ms())
+print(interferometer.max_count())
+print(interferometer.PZT())
+interferometer.clear()
+interferometer.save("test")
+print(interferometer.data())
+print(interferometer.set_ROI_left(-150, -60, 0.167))
+print(interferometer.ROI_left())
+print(interferometer.data_syn())
+print(interferometer.make_scans(4))
