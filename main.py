@@ -1,5 +1,5 @@
 import time
-from test1 import GMW5972
+from gmw_5972.gmw_5972 import GMW5972
 
 controller = GMW5972("Dev2")
 
