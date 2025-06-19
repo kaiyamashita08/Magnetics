@@ -1,5 +1,8 @@
 import socket
 
+import Util
+
+
 class Interferometer:
     """
     This interferometer software works through the Brilliant software
@@ -35,15 +38,6 @@ class Interferometer:
                 print("Timeout when running a command")
                 raise Exception("Timeout")
 
-    def _list_to_pairs(self, base_list):
-        """
-        Convert a list of elements into a list of pairs
-        :param base_list: The list of elements to convert
-        :return: The list in the form of a list of elements
-        """
-        # TODO: Maybe put this into a util class?
-        return list(zip(base_list[::2], base_list[1::2]))
-
     def clear(self):
         """
         Clears accumulation buffer (spectrum)
@@ -76,7 +70,7 @@ class Interferometer:
             print(ret)
             raise Exception("Scan Failed")
         else:
-            return self._list_to_pairs(list(map(float, ret[:-2].split("::"))))
+            return Util.list_to_pairs(list(map(float, ret[:-2].split("::"))))
 
     def set_ROI_left(self, start, stop, t):
         """
@@ -171,7 +165,7 @@ class Interferometer:
         Returns the current accumulation buffer (spectrum)
         :return: The accumulation buffer in the format [(x1,y1), (x2,y2), ...]
         """
-        return self._list_to_pairs(list(map(float, self._command("DATA?")[:-2].split("::"))))
+        return Util.list_to_pairs(list(map(float, self._command("DATA?")[:-2].split("::"))))
 
     def data_syn(self):
         """
