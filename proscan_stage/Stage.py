@@ -10,7 +10,7 @@ class Stage:
     This uses the Prior SDK python interface and documentation on commands can be found by downloading the SDK off of the Prior website
     """
 
-    def __init__(self, port = 8, path = r"C:\Users\kaiya\Documents\proscan_stage\PriorScientificSDK.dll"):
+    def __init__(self, port = 8, path = r"C:\Users\lab\Documents\GitHub\Magnetics\proscan_stage\PriorScientificSDK.dll"):
         """
         Initialize a linear stage connected to a Proscan III using the Prior python interface
         :param port: The COM port that the Proscan III is connected to. For example, put 8 for COM8
