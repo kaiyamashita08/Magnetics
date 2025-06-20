@@ -17,3 +17,7 @@ controller.close()
 stage = Stage()
 stage.set_position(0,0)
 stage.go_to_pos(5000, 5000)
+while stage.busy():
+    print("waiting")
+    time.sleep(0.2)
+print(stage.busy())
