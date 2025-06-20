@@ -1,3 +1,6 @@
+import scipy
+
+
 def str_to_pair_int(string):
     return zip(list(map(int, string.split(","))))
 
@@ -9,3 +12,5 @@ def list_to_pairs(base_list):
     """
     return list(zip(base_list[::2], base_list[1::2]))
 
+def save_array(arr, filename, matrixname):
+    scipy.io.savemat(filename, {matrixname: arr})
