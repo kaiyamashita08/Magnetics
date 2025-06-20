@@ -51,8 +51,9 @@ class Interferometer:
         :return: The current accumulation buffer (spectrum) in a list of ordered pairs [(x1,y1), (x2,y2) ...]
         :raise Scan Failed: If the scan fails
         """
-        time.sleep(5*n)
+        time.sleep(0.5*n)
         print(f"Made {n} scans")
+        return self.data()
 
     def set_ROI_left(self, start, stop, t):
         """
@@ -106,7 +107,7 @@ class Interferometer:
         Returns whether the machine is ready for a new command
         :return: True if the machine is ready, False if it is busy
         """
-        return self.busy
+        return not self.busy
 
     def sweeping(self):
         """

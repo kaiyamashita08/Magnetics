@@ -17,6 +17,9 @@ class Commands:
     def ready(self):
         return self.magnet_control.get_lockout() and self.interferometer.ready() and self.stage.cmd_ready()
 
+    def set_lockout(self, state):
+        self.magnet_control.set_lockout(state)
+
     def _wait_until_done_moving(self):
         while self.stage.busy():
             time.sleep(0.2)
@@ -32,9 +35,14 @@ class Commands:
         self._wait_until_done_moving()
         for y in range(ydim):
             for x in range(xdim):
-                self.stage.go_to_pos_relative(xres, 0)
+                self.stage.go_to_pos(xstart+xres*x, ystart+yres*y)
                 self._wait_until_done_moving()
                 data = self.interferometer.make_scans(scans)
                 for f in range(90):
-                    array[f, ydim, xdim] = data[f][1]
+                    array[f, y, x] = data[f][1]
             self.stage.go_to_pos(xstart, ystart + y * yres)
+        return array
+
+    def close(self):
+        self.magnet_control.close()
+        self.stage.close()
