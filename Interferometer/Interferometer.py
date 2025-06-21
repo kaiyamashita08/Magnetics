@@ -32,7 +32,7 @@ class Interferometer:
             try:
                 s.connect((self.host, self.port))
                 s.sendall((message + "\r\n").encode())
-                data = s.recv(1024)
+                data = s.recv(65536)
                 return data.decode()
             except socket.timeout:
                 print("Timeout when running a command")
