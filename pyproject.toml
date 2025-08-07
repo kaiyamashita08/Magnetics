@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "magnetics"
+dynamic = ["version"]
+dependencies = [
+    "pyside6"
+]
+requires-python = ">=3.11"
+
+authors = [
+    {name = "Kai Yamashita", email = "kaiyamashita08@gmail.com"}
+]
+description = "An integration of a interferometer with a magnet control as well as a stage"
+readme = "README.md"
+
+[tool.pyside6-project]
+# Make sure to include all non-test python files!
+files = ["main.py", "main_window.py", "qt_ui/main_window.ui"]

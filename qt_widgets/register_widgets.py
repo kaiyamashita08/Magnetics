@@ -1,6 +1,0 @@
-from qt_widgets.status_label.QStatusLabel import QStatusLabel
-from qt_widgets.status_label.StatusLabelPlugin import StatusLabelPlugin
-from PySide6.QtDesigner import QPyDesignerCustomWidgetCollection
-
-# The collection can bundle any number of plugins.
-QPyDesignerCustomWidgetCollection.registerCustomWidget(QStatusLabel)
