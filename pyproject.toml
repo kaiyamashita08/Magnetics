@@ -17,5 +17,5 @@ description = "An integration of a interferometer with a magnet control as well 
 readme = "README.md"
 
 [tool.pyside6-project]
-# Make sure to include all non-test python files!
+# TODO: Make sure to include all non-test python files!
 files = ["main.py", "main_window.py", "qt_ui/main_window.ui"]

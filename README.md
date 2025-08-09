@@ -17,8 +17,7 @@ Command prompt to regenerate the .py UI scripts
 
 cd to the parent directory, then run
 
-main_window:
-pyuic6 -o py_ui/main_window.py qt_ui/main_window.ui
+pyside6-project build
 
 ---------------------------------------
 TODO LIST

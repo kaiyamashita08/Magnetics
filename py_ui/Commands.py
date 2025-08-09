@@ -7,6 +7,8 @@ from proscan_stage.Stage import Stage
 
 import numpy as np
 
+from PySide6.QtCore import Slot
+
 class Commands:
     def __init__(self):
         self.magnet_control = magnet_control()
@@ -23,6 +25,13 @@ class Commands:
     def _wait_until_done_moving(self):
         while self.stage.busy():
             time.sleep(0.2)
+
+    def set_magnet(self, flux):
+        self.magnet_control.set_magnet(flux)
+
+    def safe_stop(self):
+        self.magnet_control.set_magnet(0)
+        self.stage.safe_stop()
 
     def run(self, xlen, ylen, xres, yres, xstart, ystart, flux, scans = 1):
         if not self.ready():

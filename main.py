@@ -1,6 +1,6 @@
 import time
 
-from Commands import Commands
+from py_ui.Commands import Commands
 
 commands = Commands()
 

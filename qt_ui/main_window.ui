@@ -97,37 +97,23 @@
          <rect>
           <x>420</x>
           <y>240</y>
-          <width>241</width>
+          <width>253</width>
           <height>114</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="1">
-          <widget class="QDoubleSpinBox" name="magnet_strength"/>
-         </item>
-         <item row="2" column="1">
-          <widget class="QPushButton" name="magnet_start">
-           <property name="text">
-            <string>Start Magnet</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="text_6">
-           <property name="text">
-            <string>Magnet Strength (Teslas)</string>
-           </property>
-          </widget>
-         </item>
          <item row="3" column="0">
           <widget class="QLabel" name="text_5">
            <property name="text">
-            <string>Microns per measurement</string>
+            <string>Resolution</string>
            </property>
           </widget>
          </item>
          <item row="3" column="1">
           <widget class="QSpinBox" name="stage_res">
+           <property name="suffix">
+            <string> µm</string>
+           </property>
            <property name="maximum">
             <number>100</number>
            </property>
@@ -143,6 +129,30 @@
            </property>
           </widget>
          </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="text_6">
+           <property name="text">
+            <string>Magnet Strength</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="magnet_strength">
+           <property name="suffix">
+            <string> T</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="magnet_enabled">
+           <property name="text">
+            <string>Enable Magnet</string>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
        <widget class="QWidget" name="gridLayoutWidget_3">
@@ -150,7 +160,7 @@
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>381</width>
+          <width>394</width>
           <height>166</height>
          </rect>
         </property>
@@ -304,6 +314,19 @@
         </property>
         <property name="value">
          <number>24</number>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="enabled">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>270</y>
+          <width>78</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enabled</string>
         </property>
        </widget>
       </widget>

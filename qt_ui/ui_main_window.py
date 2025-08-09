@@ -16,11 +16,11 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QDoubleSpinBox, QGridLayout, QLCDNumber,
-    QLabel, QMainWindow, QMenu, QMenuBar,
-    QProgressBar, QPushButton, QSizePolicy, QSpacerItem,
-    QSpinBox, QStatusBar, QTabWidget, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QDoubleSpinBox, QGridLayout,
+    QLCDNumber, QLabel, QMainWindow, QMenu,
+    QMenuBar, QProgressBar, QPushButton, QSizePolicy,
+    QSpacerItem, QSpinBox, QStatusBar, QTabWidget,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -83,25 +83,10 @@ class Ui_MainWindow(object):
 
         self.gridLayoutWidget_2 = QWidget(self.main)
         self.gridLayoutWidget_2.setObjectName(u"gridLayoutWidget_2")
-        self.gridLayoutWidget_2.setGeometry(QRect(420, 240, 241, 114))
+        self.gridLayoutWidget_2.setGeometry(QRect(420, 240, 253, 114))
         self.gridLayout_2 = QGridLayout(self.gridLayoutWidget_2)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.magnet_strength = QDoubleSpinBox(self.gridLayoutWidget_2)
-        self.magnet_strength.setObjectName(u"magnet_strength")
-
-        self.gridLayout_2.addWidget(self.magnet_strength, 0, 1, 1, 1)
-
-        self.magnet_start = QPushButton(self.gridLayoutWidget_2)
-        self.magnet_start.setObjectName(u"magnet_start")
-
-        self.gridLayout_2.addWidget(self.magnet_start, 2, 1, 1, 1)
-
-        self.text_6 = QLabel(self.gridLayoutWidget_2)
-        self.text_6.setObjectName(u"text_6")
-
-        self.gridLayout_2.addWidget(self.text_6, 0, 0, 1, 1)
-
         self.text_5 = QLabel(self.gridLayoutWidget_2)
         self.text_5.setObjectName(u"text_5")
 
@@ -119,9 +104,25 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.main_start, 4, 1, 1, 1)
 
+        self.text_6 = QLabel(self.gridLayoutWidget_2)
+        self.text_6.setObjectName(u"text_6")
+
+        self.gridLayout_2.addWidget(self.text_6, 0, 0, 1, 1)
+
+        self.magnet_strength = QDoubleSpinBox(self.gridLayoutWidget_2)
+        self.magnet_strength.setObjectName(u"magnet_strength")
+
+        self.gridLayout_2.addWidget(self.magnet_strength, 0, 1, 1, 1)
+
+        self.magnet_enabled = QCheckBox(self.gridLayoutWidget_2)
+        self.magnet_enabled.setObjectName(u"magnet_enabled")
+        self.magnet_enabled.setTristate(False)
+
+        self.gridLayout_2.addWidget(self.magnet_enabled, 1, 1, 1, 1)
+
         self.gridLayoutWidget_3 = QWidget(self.main)
         self.gridLayoutWidget_3.setObjectName(u"gridLayoutWidget_3")
-        self.gridLayoutWidget_3.setGeometry(QRect(10, 20, 381, 166))
+        self.gridLayoutWidget_3.setGeometry(QRect(10, 20, 394, 166))
         self.gridLayout_3 = QGridLayout(self.gridLayoutWidget_3)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -220,6 +221,9 @@ class Ui_MainWindow(object):
         self.progressbar.setObjectName(u"progressbar")
         self.progressbar.setGeometry(QRect(10, 400, 641, 23))
         self.progressbar.setValue(24)
+        self.enabled = QCheckBox(self.main)
+        self.enabled.setObjectName(u"enabled")
+        self.enabled.setGeometry(QRect(50, 270, 78, 20))
         self.tabWidget.addTab(self.main, "")
         self.magnet = QWidget()
         self.magnet.setObjectName(u"magnet")
@@ -264,10 +268,12 @@ class Ui_MainWindow(object):
         self.magnet_status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.stage_status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.text_2.setText(QCoreApplication.translate("MainWindow", u"Status", None))
-        self.magnet_start.setText(QCoreApplication.translate("MainWindow", u"Start Magnet", None))
-        self.text_6.setText(QCoreApplication.translate("MainWindow", u"Magnet Strength (Teslas)", None))
-        self.text_5.setText(QCoreApplication.translate("MainWindow", u"Microns per measurement", None))
+        self.text_5.setText(QCoreApplication.translate("MainWindow", u"Resolution", None))
+        self.stage_res.setSuffix(QCoreApplication.translate("MainWindow", u" \u00b5m", None))
         self.main_start.setText(QCoreApplication.translate("MainWindow", u"Start!", None))
+        self.text_6.setText(QCoreApplication.translate("MainWindow", u"Magnet Strength", None))
+        self.magnet_strength.setSuffix(QCoreApplication.translate("MainWindow", u" T", None))
+        self.magnet_enabled.setText(QCoreApplication.translate("MainWindow", u"Enable Magnet", None))
         self.stage_corner2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.stage_set_corner2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
         self.text_11.setText(QCoreApplication.translate("MainWindow", u"Second Corner", None))
@@ -281,6 +287,7 @@ class Ui_MainWindow(object):
         self.stage_down.setText(QCoreApplication.translate("MainWindow", u"Down", None))
         self.stage_corner1.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.text_8.setText(QCoreApplication.translate("MainWindow", u"Y", None))
+        self.enabled.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.main), QCoreApplication.translate("MainWindow", u"Main", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.magnet), QCoreApplication.translate("MainWindow", u"Magnet", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.interferometer), QCoreApplication.translate("MainWindow", u"Interferometer", None))
