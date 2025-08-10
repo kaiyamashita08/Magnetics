@@ -1,6 +1,6 @@
 import time
 
-from gmw_5972.gmw_5972 import GMW5972
+from gmw_5972.gmw_5972_sim import GMW5972
 
 
 class magnet_control:

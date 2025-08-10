@@ -1,9 +1,13 @@
 import time
 from math import floor
 
+# from Interferometer.Interferometer_sim import Interferometer
+# from gmw_5972.magnet_control import magnet_control
+# from proscan_stage.Stage import Stage
+
 from Interferometer.Interferometer_sim import Interferometer
 from gmw_5972.magnet_control import magnet_control
-from proscan_stage.Stage import Stage
+from proscan_stage.Stage_sim import Stage
 
 import numpy as np
 

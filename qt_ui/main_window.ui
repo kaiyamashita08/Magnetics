@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="main">
        <attribute name="title">
@@ -70,7 +70,7 @@
           </widget>
          </item>
          <item row="2" column="2">
-          <widget class="QLabel" name="magnet_status">
+          <widget class="QLabel" name="magnet_status_1">
            <property name="text">
             <string>TextLabel</string>
            </property>
@@ -137,7 +137,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QDoubleSpinBox" name="magnet_strength">
+          <widget class="QDoubleSpinBox" name="magnet_strength_1">
            <property name="suffix">
             <string> T</string>
            </property>
@@ -334,6 +334,127 @@
        <attribute name="title">
         <string>Magnet</string>
        </attribute>
+       <widget class="QWidget" name="gridLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>70</y>
+          <width>293</width>
+          <height>132</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="2" column="1">
+          <widget class="QLCDNumber" name="magnet_output"/>
+         </item>
+         <item row="4" column="1">
+          <widget class="QDoubleSpinBox" name="magnet_strength_2">
+           <property name="suffix">
+            <string> T</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="text_12">
+           <property name="text">
+            <string>Magnet Strength (Teslas):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="calibration_value">
+           <property name="text">
+            <string>N/A</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QCheckBox" name="magnet_enabled_2">
+           <property name="text">
+            <string>Enable Magnet</string>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="text_14">
+           <property name="text">
+            <string>Magnet Strength</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="text_17">
+           <property name="text">
+            <string>Calibration Value (Amps Per Tesla)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="calibrate_button">
+           <property name="text">
+            <string>Calibrate Magnet</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>160</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="1" column="0">
+          <widget class="QLabel" name="text_15">
+           <property name="text">
+            <string>Enabled</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="text_13">
+           <property name="text">
+            <string>Magnet Status</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="text_16">
+           <property name="text">
+            <string>Calibration Status</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="magnet_status_2">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="magnet_enabled_status">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="magnet_calibrated">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="interferometer">
        <attribute name="title">

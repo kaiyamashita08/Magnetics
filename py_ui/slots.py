@@ -9,5 +9,5 @@ class Slots:
         self.commands = Commands()
 
     @Slot()
-    def start_magnet(self):
-        self.commands.set_magnet(self.flux)
+    def start_magnet(self, flux):
+        self.commands.set_magnet(flux)

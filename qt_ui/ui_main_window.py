@@ -66,10 +66,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.text_4, 4, 0, 1, 1)
 
-        self.magnet_status = QLabel(self.gridLayoutWidget)
-        self.magnet_status.setObjectName(u"magnet_status")
+        self.magnet_status_1 = QLabel(self.gridLayoutWidget)
+        self.magnet_status_1.setObjectName(u"magnet_status_1")
 
-        self.gridLayout.addWidget(self.magnet_status, 2, 2, 1, 1)
+        self.gridLayout.addWidget(self.magnet_status_1, 2, 2, 1, 1)
 
         self.stage_status = QLabel(self.gridLayoutWidget)
         self.stage_status.setObjectName(u"stage_status")
@@ -109,10 +109,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.text_6, 0, 0, 1, 1)
 
-        self.magnet_strength = QDoubleSpinBox(self.gridLayoutWidget_2)
-        self.magnet_strength.setObjectName(u"magnet_strength")
+        self.magnet_strength_1 = QDoubleSpinBox(self.gridLayoutWidget_2)
+        self.magnet_strength_1.setObjectName(u"magnet_strength_1")
 
-        self.gridLayout_2.addWidget(self.magnet_strength, 0, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.magnet_strength_1, 0, 1, 1, 1)
 
         self.magnet_enabled = QCheckBox(self.gridLayoutWidget_2)
         self.magnet_enabled.setObjectName(u"magnet_enabled")
@@ -227,6 +227,89 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.main, "")
         self.magnet = QWidget()
         self.magnet.setObjectName(u"magnet")
+        self.gridLayoutWidget_4 = QWidget(self.magnet)
+        self.gridLayoutWidget_4.setObjectName(u"gridLayoutWidget_4")
+        self.gridLayoutWidget_4.setGeometry(QRect(360, 70, 293, 132))
+        self.gridLayout_4 = QGridLayout(self.gridLayoutWidget_4)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.magnet_output = QLCDNumber(self.gridLayoutWidget_4)
+        self.magnet_output.setObjectName(u"magnet_output")
+
+        self.gridLayout_4.addWidget(self.magnet_output, 2, 1, 1, 1)
+
+        self.magnet_strength_2 = QDoubleSpinBox(self.gridLayoutWidget_4)
+        self.magnet_strength_2.setObjectName(u"magnet_strength_2")
+
+        self.gridLayout_4.addWidget(self.magnet_strength_2, 4, 1, 1, 1)
+
+        self.text_12 = QLabel(self.gridLayoutWidget_4)
+        self.text_12.setObjectName(u"text_12")
+
+        self.gridLayout_4.addWidget(self.text_12, 2, 0, 1, 1)
+
+        self.calibration_value = QLabel(self.gridLayoutWidget_4)
+        self.calibration_value.setObjectName(u"calibration_value")
+
+        self.gridLayout_4.addWidget(self.calibration_value, 0, 1, 1, 1)
+
+        self.magnet_enabled_2 = QCheckBox(self.gridLayoutWidget_4)
+        self.magnet_enabled_2.setObjectName(u"magnet_enabled_2")
+        self.magnet_enabled_2.setTristate(False)
+
+        self.gridLayout_4.addWidget(self.magnet_enabled_2, 5, 1, 1, 1)
+
+        self.text_14 = QLabel(self.gridLayoutWidget_4)
+        self.text_14.setObjectName(u"text_14")
+
+        self.gridLayout_4.addWidget(self.text_14, 4, 0, 1, 1)
+
+        self.text_17 = QLabel(self.gridLayoutWidget_4)
+        self.text_17.setObjectName(u"text_17")
+
+        self.gridLayout_4.addWidget(self.text_17, 0, 0, 1, 1)
+
+        self.calibrate_button = QPushButton(self.gridLayoutWidget_4)
+        self.calibrate_button.setObjectName(u"calibrate_button")
+
+        self.gridLayout_4.addWidget(self.calibrate_button, 1, 1, 1, 1)
+
+        self.gridLayoutWidget_5 = QWidget(self.magnet)
+        self.gridLayoutWidget_5.setObjectName(u"gridLayoutWidget_5")
+        self.gridLayoutWidget_5.setGeometry(QRect(60, 70, 160, 80))
+        self.gridLayout_5 = QGridLayout(self.gridLayoutWidget_5)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.text_15 = QLabel(self.gridLayoutWidget_5)
+        self.text_15.setObjectName(u"text_15")
+
+        self.gridLayout_5.addWidget(self.text_15, 1, 0, 1, 1)
+
+        self.text_13 = QLabel(self.gridLayoutWidget_5)
+        self.text_13.setObjectName(u"text_13")
+
+        self.gridLayout_5.addWidget(self.text_13, 0, 0, 1, 1)
+
+        self.text_16 = QLabel(self.gridLayoutWidget_5)
+        self.text_16.setObjectName(u"text_16")
+
+        self.gridLayout_5.addWidget(self.text_16, 2, 0, 1, 1)
+
+        self.magnet_status_2 = QLabel(self.gridLayoutWidget_5)
+        self.magnet_status_2.setObjectName(u"magnet_status_2")
+
+        self.gridLayout_5.addWidget(self.magnet_status_2, 0, 1, 1, 1)
+
+        self.magnet_enabled_status = QLabel(self.gridLayoutWidget_5)
+        self.magnet_enabled_status.setObjectName(u"magnet_enabled_status")
+
+        self.gridLayout_5.addWidget(self.magnet_enabled_status, 1, 1, 1, 1)
+
+        self.magnet_calibrated = QLabel(self.gridLayoutWidget_5)
+        self.magnet_calibrated.setObjectName(u"magnet_calibrated")
+
+        self.gridLayout_5.addWidget(self.magnet_calibrated, 2, 1, 1, 1)
+
         self.tabWidget.addTab(self.magnet, "")
         self.interferometer = QWidget()
         self.interferometer.setObjectName(u"interferometer")
@@ -252,7 +335,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -265,14 +348,14 @@ class Ui_MainWindow(object):
         self.text_3.setText(QCoreApplication.translate("MainWindow", u"Interferometer Status", None))
         self.text.setText(QCoreApplication.translate("MainWindow", u"Magnet Status", None))
         self.text_4.setText(QCoreApplication.translate("MainWindow", u"Stage Status", None))
-        self.magnet_status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.magnet_status_1.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.stage_status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.text_2.setText(QCoreApplication.translate("MainWindow", u"Status", None))
         self.text_5.setText(QCoreApplication.translate("MainWindow", u"Resolution", None))
         self.stage_res.setSuffix(QCoreApplication.translate("MainWindow", u" \u00b5m", None))
         self.main_start.setText(QCoreApplication.translate("MainWindow", u"Start!", None))
         self.text_6.setText(QCoreApplication.translate("MainWindow", u"Magnet Strength", None))
-        self.magnet_strength.setSuffix(QCoreApplication.translate("MainWindow", u" T", None))
+        self.magnet_strength_1.setSuffix(QCoreApplication.translate("MainWindow", u" T", None))
         self.magnet_enabled.setText(QCoreApplication.translate("MainWindow", u"Enable Magnet", None))
         self.stage_corner2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.stage_set_corner2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
@@ -289,6 +372,19 @@ class Ui_MainWindow(object):
         self.text_8.setText(QCoreApplication.translate("MainWindow", u"Y", None))
         self.enabled.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.main), QCoreApplication.translate("MainWindow", u"Main", None))
+        self.magnet_strength_2.setSuffix(QCoreApplication.translate("MainWindow", u" T", None))
+        self.text_12.setText(QCoreApplication.translate("MainWindow", u"Magnet Strength (Teslas):", None))
+        self.calibration_value.setText(QCoreApplication.translate("MainWindow", u"N/A", None))
+        self.magnet_enabled_2.setText(QCoreApplication.translate("MainWindow", u"Enable Magnet", None))
+        self.text_14.setText(QCoreApplication.translate("MainWindow", u"Magnet Strength", None))
+        self.text_17.setText(QCoreApplication.translate("MainWindow", u"Calibration Value (Amps Per Tesla)", None))
+        self.calibrate_button.setText(QCoreApplication.translate("MainWindow", u"Calibrate Magnet", None))
+        self.text_15.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
+        self.text_13.setText(QCoreApplication.translate("MainWindow", u"Magnet Status", None))
+        self.text_16.setText(QCoreApplication.translate("MainWindow", u"Calibration Status", None))
+        self.magnet_status_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.magnet_enabled_status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.magnet_calibrated.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.magnet), QCoreApplication.translate("MainWindow", u"Magnet", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.interferometer), QCoreApplication.translate("MainWindow", u"Interferometer", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.stage), QCoreApplication.translate("MainWindow", u"Stage", None))
