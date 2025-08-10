@@ -141,10 +141,16 @@
            <property name="suffix">
             <string> T</string>
            </property>
+           <property name="maximum">
+            <double>9.990000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QCheckBox" name="magnet_enabled">
+          <widget class="QCheckBox" name="magnet_enabled_1">
            <property name="text">
             <string>Enable Magnet</string>
            </property>
@@ -351,6 +357,12 @@
           <widget class="QDoubleSpinBox" name="magnet_strength_2">
            <property name="suffix">
             <string> T</string>
+           </property>
+           <property name="maximum">
+            <double>9.990000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
            </property>
           </widget>
          </item>

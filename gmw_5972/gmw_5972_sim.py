@@ -58,7 +58,7 @@ class GMW5972:
         Get the magnetic field from a connected sensor
         :return: The magnetic field in Teslas
         """
-        return self.current / self.current_per_T + 0.2 * random.random() - 0.1
+        return self.current / self.current_per_T + 0.1 * random.random() - 0.05
 
     def magnet_flow_interlock(self):
         """

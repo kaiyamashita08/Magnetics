@@ -111,14 +111,16 @@ class Ui_MainWindow(object):
 
         self.magnet_strength_1 = QDoubleSpinBox(self.gridLayoutWidget_2)
         self.magnet_strength_1.setObjectName(u"magnet_strength_1")
+        self.magnet_strength_1.setMaximum(9.990000000000000)
+        self.magnet_strength_1.setSingleStep(0.100000000000000)
 
         self.gridLayout_2.addWidget(self.magnet_strength_1, 0, 1, 1, 1)
 
-        self.magnet_enabled = QCheckBox(self.gridLayoutWidget_2)
-        self.magnet_enabled.setObjectName(u"magnet_enabled")
-        self.magnet_enabled.setTristate(False)
+        self.magnet_enabled_1 = QCheckBox(self.gridLayoutWidget_2)
+        self.magnet_enabled_1.setObjectName(u"magnet_enabled_1")
+        self.magnet_enabled_1.setTristate(False)
 
-        self.gridLayout_2.addWidget(self.magnet_enabled, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.magnet_enabled_1, 1, 1, 1, 1)
 
         self.gridLayoutWidget_3 = QWidget(self.main)
         self.gridLayoutWidget_3.setObjectName(u"gridLayoutWidget_3")
@@ -240,6 +242,8 @@ class Ui_MainWindow(object):
 
         self.magnet_strength_2 = QDoubleSpinBox(self.gridLayoutWidget_4)
         self.magnet_strength_2.setObjectName(u"magnet_strength_2")
+        self.magnet_strength_2.setMaximum(9.990000000000000)
+        self.magnet_strength_2.setSingleStep(0.100000000000000)
 
         self.gridLayout_4.addWidget(self.magnet_strength_2, 4, 1, 1, 1)
 
@@ -356,7 +360,7 @@ class Ui_MainWindow(object):
         self.main_start.setText(QCoreApplication.translate("MainWindow", u"Start!", None))
         self.text_6.setText(QCoreApplication.translate("MainWindow", u"Magnet Strength", None))
         self.magnet_strength_1.setSuffix(QCoreApplication.translate("MainWindow", u" T", None))
-        self.magnet_enabled.setText(QCoreApplication.translate("MainWindow", u"Enable Magnet", None))
+        self.magnet_enabled_1.setText(QCoreApplication.translate("MainWindow", u"Enable Magnet", None))
         self.stage_corner2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.stage_set_corner2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
         self.text_11.setText(QCoreApplication.translate("MainWindow", u"Second Corner", None))

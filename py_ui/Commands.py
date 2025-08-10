@@ -13,6 +13,7 @@ import numpy as np
 
 from PySide6.QtCore import Slot
 
+
 class Commands:
     def __init__(self):
         self.magnet_control = magnet_control()
@@ -23,6 +24,7 @@ class Commands:
     def ready(self):
         return self.magnet_control.get_lockout() and self.interferometer.ready() and self.stage.cmd_ready()
 
+    @Slot()
     def set_lockout(self, state):
         self.magnet_control.set_lockout(state)
 
@@ -30,8 +32,16 @@ class Commands:
         while self.stage.busy():
             time.sleep(0.2)
 
+    def calibrate_magent(self):
+        self.magnet_control.calibrate_magnet()
+        return self.magnet_control.get_current_per_T()
+
+    @Slot()
     def set_magnet(self, flux):
         self.magnet_control.set_magnet(flux)
+
+    def get_magnet_field(self):
+        return self.magnet_control.get_field()
 
     def safe_stop(self):
         self.magnet_control.set_magnet(0)

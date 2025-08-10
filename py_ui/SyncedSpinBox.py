@@ -21,7 +21,6 @@ class SpinBoxModel(QObject):
             self.valueChanged.emit(new_value)
     
     def set_value(self, new_value):
-        """Convenience method for signal connections"""
         self.value = new_value
 
 class SyncedSpinBox(QWidget):
