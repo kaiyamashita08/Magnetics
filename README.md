@@ -23,12 +23,19 @@ pyside6-project build
 TODO LIST
 ---------------------------------------
 
+Checklist for lab time
+- check if move relative actually works???
+
 Finish pyproject.toml
 Finish this, add instructions on how to use maybe
 Finish the code
 - UI n stuff
 - Data processing
 - Maybe some software limits?
-- Extra precision to <1 micron on stage
 - who knows what else
+Small Stuff
+- figure out save file location stuff
+- Take into account stage rotation for stage control
+Maybe Stuff
+- Extra precision to <1 micron on stage
 Profit :)

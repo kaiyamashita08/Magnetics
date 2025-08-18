@@ -317,9 +317,176 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.magnet, "")
         self.interferometer = QWidget()
         self.interferometer.setObjectName(u"interferometer")
+        self.gridLayoutWidget_6 = QWidget(self.interferometer)
+        self.gridLayoutWidget_6.setObjectName(u"gridLayoutWidget_6")
+        self.gridLayoutWidget_6.setGeometry(QRect(70, 50, 160, 48))
+        self.gridLayout_6 = QGridLayout(self.gridLayoutWidget_6)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.gridLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.interferometer_ready = QLabel(self.gridLayoutWidget_6)
+        self.interferometer_ready.setObjectName(u"interferometer_ready")
+
+        self.gridLayout_6.addWidget(self.interferometer_ready, 0, 1, 1, 1)
+
+        self.text_18 = QLabel(self.gridLayoutWidget_6)
+        self.text_18.setObjectName(u"text_18")
+
+        self.gridLayout_6.addWidget(self.text_18, 0, 0, 1, 1)
+
+        self.save_data = QPushButton(self.gridLayoutWidget_6)
+        self.save_data.setObjectName(u"save_data")
+
+        self.gridLayout_6.addWidget(self.save_data, 1, 1, 1, 1)
+
+        self.label_3 = QLabel(self.interferometer)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(370, 180, 171, 121))
         self.tabWidget.addTab(self.interferometer, "")
         self.stage = QWidget()
         self.stage.setObjectName(u"stage")
+        self.gridLayoutWidget_7 = QWidget(self.stage)
+        self.gridLayoutWidget_7.setObjectName(u"gridLayoutWidget_7")
+        self.gridLayoutWidget_7.setGeometry(QRect(270, 40, 394, 166))
+        self.gridLayout_7 = QGridLayout(self.gridLayoutWidget_7)
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.gridLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.stage_corner2_2 = QLabel(self.gridLayoutWidget_7)
+        self.stage_corner2_2.setObjectName(u"stage_corner2_2")
+
+        self.gridLayout_7.addWidget(self.stage_corner2_2, 5, 2, 1, 1)
+
+        self.stage_set_corner2_2 = QPushButton(self.gridLayoutWidget_7)
+        self.stage_set_corner2_2.setObjectName(u"stage_set_corner2_2")
+
+        self.gridLayout_7.addWidget(self.stage_set_corner2_2, 6, 1, 1, 1)
+
+        self.text_19 = QLabel(self.gridLayoutWidget_7)
+        self.text_19.setObjectName(u"text_19")
+
+        self.gridLayout_7.addWidget(self.text_19, 5, 1, 1, 1)
+
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_7.addItem(self.horizontalSpacer_3, 4, 7, 1, 1)
+
+        self.stage_set_corner1_2 = QPushButton(self.gridLayoutWidget_7)
+        self.stage_set_corner1_2.setObjectName(u"stage_set_corner1_2")
+
+        self.gridLayout_7.addWidget(self.stage_set_corner1_2, 4, 1, 1, 1)
+
+        self.stage_up_2 = QPushButton(self.gridLayoutWidget_7)
+        self.stage_up_2.setObjectName(u"stage_up_2")
+
+        self.gridLayout_7.addWidget(self.stage_up_2, 4, 5, 1, 1)
+
+        self.stage_y_2 = QLCDNumber(self.gridLayoutWidget_7)
+        self.stage_y_2.setObjectName(u"stage_y_2")
+
+        self.gridLayout_7.addWidget(self.stage_y_2, 3, 5, 1, 1)
+
+        self.stage_left_2 = QPushButton(self.gridLayoutWidget_7)
+        self.stage_left_2.setObjectName(u"stage_left_2")
+
+        self.gridLayout_7.addWidget(self.stage_left_2, 5, 3, 1, 1)
+
+        self.text_20 = QLabel(self.gridLayoutWidget_7)
+        self.text_20.setObjectName(u"text_20")
+
+        self.gridLayout_7.addWidget(self.text_20, 0, 3, 1, 1)
+
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.gridLayout_7.addItem(self.horizontalSpacer_4, 4, 3, 1, 1)
+
+        self.stage_right_2 = QPushButton(self.gridLayoutWidget_7)
+        self.stage_right_2.setObjectName(u"stage_right_2")
+
+        self.gridLayout_7.addWidget(self.stage_right_2, 5, 7, 1, 1)
+
+        self.stage_stepsize_2 = QSpinBox(self.gridLayoutWidget_7)
+        self.stage_stepsize_2.setObjectName(u"stage_stepsize_2")
+        self.stage_stepsize_2.setMaximum(5000)
+        self.stage_stepsize_2.setSingleStep(50)
+        self.stage_stepsize_2.setValue(1000)
+
+        self.gridLayout_7.addWidget(self.stage_stepsize_2, 3, 7, 1, 1)
+
+        self.text_21 = QLabel(self.gridLayoutWidget_7)
+        self.text_21.setObjectName(u"text_21")
+
+        self.gridLayout_7.addWidget(self.text_21, 3, 1, 1, 1)
+
+        self.text_22 = QLabel(self.gridLayoutWidget_7)
+        self.text_22.setObjectName(u"text_22")
+
+        self.gridLayout_7.addWidget(self.text_22, 0, 7, 1, 1)
+
+        self.stage_down_2 = QPushButton(self.gridLayoutWidget_7)
+        self.stage_down_2.setObjectName(u"stage_down_2")
+
+        self.gridLayout_7.addWidget(self.stage_down_2, 6, 5, 1, 1)
+
+        self.stage_corner1_2 = QLabel(self.gridLayoutWidget_7)
+        self.stage_corner1_2.setObjectName(u"stage_corner1_2")
+
+        self.gridLayout_7.addWidget(self.stage_corner1_2, 3, 2, 1, 1)
+
+        self.text_23 = QLabel(self.gridLayoutWidget_7)
+        self.text_23.setObjectName(u"text_23")
+
+        self.gridLayout_7.addWidget(self.text_23, 0, 5, 1, 1)
+
+        self.stage_x_2 = QLCDNumber(self.gridLayoutWidget_7)
+        self.stage_x_2.setObjectName(u"stage_x_2")
+
+        self.gridLayout_7.addWidget(self.stage_x_2, 3, 3, 1, 1)
+
+        self.gridLayoutWidget_8 = QWidget(self.stage)
+        self.gridLayoutWidget_8.setObjectName(u"gridLayoutWidget_8")
+        self.gridLayoutWidget_8.setGeometry(QRect(30, 40, 201, 121))
+        self.gridLayout_8 = QGridLayout(self.gridLayoutWidget_8)
+        self.gridLayout_8.setObjectName(u"gridLayout_8")
+        self.gridLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.label = QLabel(self.gridLayoutWidget_8)
+        self.label.setObjectName(u"label")
+
+        self.gridLayout_8.addWidget(self.label, 0, 0, 1, 1)
+
+        self.label_5 = QLabel(self.gridLayoutWidget_8)
+        self.label_5.setObjectName(u"label_5")
+
+        self.gridLayout_8.addWidget(self.label_5, 1, 1, 1, 1)
+
+        self.label_2 = QLabel(self.gridLayoutWidget_8)
+        self.label_2.setObjectName(u"label_2")
+
+        self.gridLayout_8.addWidget(self.label_2, 0, 1, 1, 1)
+
+        self.label_7 = QLabel(self.gridLayoutWidget_8)
+        self.label_7.setObjectName(u"label_7")
+
+        self.gridLayout_8.addWidget(self.label_7, 2, 1, 1, 1)
+
+        self.label_4 = QLabel(self.gridLayoutWidget_8)
+        self.label_4.setObjectName(u"label_4")
+
+        self.gridLayout_8.addWidget(self.label_4, 1, 0, 1, 1)
+
+        self.label_6 = QLabel(self.gridLayoutWidget_8)
+        self.label_6.setObjectName(u"label_6")
+
+        self.gridLayout_8.addWidget(self.label_6, 2, 0, 1, 1)
+
+        self.label_8 = QLabel(self.gridLayoutWidget_8)
+        self.label_8.setObjectName(u"label_8")
+
+        self.gridLayout_8.addWidget(self.label_8, 3, 0, 1, 1)
+
+        self.label_9 = QLabel(self.gridLayoutWidget_8)
+        self.label_9.setObjectName(u"label_9")
+
+        self.gridLayout_8.addWidget(self.label_9, 3, 1, 1, 1)
+
         self.tabWidget.addTab(self.stage, "")
 
         self.verticalLayout.addWidget(self.tabWidget)
@@ -339,7 +506,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -390,7 +557,32 @@ class Ui_MainWindow(object):
         self.magnet_enabled_status.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.magnet_calibrated.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.magnet), QCoreApplication.translate("MainWindow", u"Magnet", None))
+        self.interferometer_ready.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.text_18.setText(QCoreApplication.translate("MainWindow", u"Ready?", None))
+        self.save_data.setText(QCoreApplication.translate("MainWindow", u"Save Data", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Fancy placeholder for data", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.interferometer), QCoreApplication.translate("MainWindow", u"Interferometer", None))
+        self.stage_corner2_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.stage_set_corner2_2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.text_19.setText(QCoreApplication.translate("MainWindow", u"Second Corner", None))
+        self.stage_set_corner1_2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.stage_up_2.setText(QCoreApplication.translate("MainWindow", u"Up", None))
+        self.stage_left_2.setText(QCoreApplication.translate("MainWindow", u"Left", None))
+        self.text_20.setText(QCoreApplication.translate("MainWindow", u"X", None))
+        self.stage_right_2.setText(QCoreApplication.translate("MainWindow", u"Right", None))
+        self.text_21.setText(QCoreApplication.translate("MainWindow", u"First Corner", None))
+        self.text_22.setText(QCoreApplication.translate("MainWindow", u"Microns per Step", None))
+        self.stage_down_2.setText(QCoreApplication.translate("MainWindow", u"Down", None))
+        self.stage_corner1_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.text_23.setText(QCoreApplication.translate("MainWindow", u"Y", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Status", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Stage Status", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Busy", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Command Ready", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.stage), QCoreApplication.translate("MainWindow", u"Stage", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
     # retranslateUi

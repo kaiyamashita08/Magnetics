@@ -5,23 +5,26 @@ from PySide6.QtWidgets import QWidget, QDoubleSpinBox
 class SpinBoxModel(QObject):
     valueChanged = Signal(float)
     
-    def __init__(self, defaultValue = 0, parent=None):
+    def __init__(self, defaultValue = 0.0, parent=None):
         super(SpinBoxModel, self).__init__(parent)
         self._content = defaultValue
 
     @Property(float, notify=valueChanged)
     def value(self):
         return self._content
-    
+
     @value.setter
     def value(self, new_value):
         if new_value != self._content:
             print(f"setting value: {new_value}")
             self._content = new_value
             self.valueChanged.emit(new_value)
-    
+
     def set_value(self, new_value):
         self.value = new_value
+
+    def get_value(self):
+        return self._content
 
 class SyncedSpinBox(QWidget):
     def __init__(self, model, gui_model : QDoubleSpinBox):

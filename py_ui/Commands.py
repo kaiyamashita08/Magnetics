@@ -6,6 +6,7 @@ from math import floor
 # from proscan_stage.Stage import Stage
 
 from Interferometer.Interferometer_sim import Interferometer
+from Util import save_array
 from gmw_5972.magnet_control import magnet_control
 from proscan_stage.Stage_sim import Stage
 
@@ -15,6 +16,8 @@ from PySide6.QtCore import Slot
 
 
 class Commands:
+    data = np.zeros([90, 1, 1], np.int32)
+
     def __init__(self):
         self.magnet_control = magnet_control()
         self.interferometer = Interferometer()
@@ -43,16 +46,31 @@ class Commands:
     def get_magnet_field(self):
         return self.magnet_control.get_field()
 
+    def get_data(self):
+        return self.data
+
+    def save_data(self, name):
+        save_array(self.data, name, name)
+
     def safe_stop(self):
         self.magnet_control.set_magnet(0)
         self.stage.safe_stop()
+
+    def move_xy_relative(self, x, y):
+        self.stage.go_to_pos_relative(x, y)
+
+    def get_x(self):
+        return self.stage.get_position()[0]
+
+    def get_y(self):
+        return self.stage.get_position()[1]
 
     def run(self, xlen, ylen, xres, yres, xstart, ystart, flux, scans = 1):
         if not self.ready():
             return
         xdim = floor(xlen / xres) + 1
         ydim = floor(ylen / yres) + 1
-        array = np.zeros([90, ydim, xdim], np.int32)
+        self.data = np.zeros([90, ydim, xdim], np.int32)
         self.magnet_control.set_magnet(flux)
         self.stage.go_to_pos(xstart,ystart)
         self._wait_until_done_moving()
@@ -62,9 +80,9 @@ class Commands:
                 self._wait_until_done_moving()
                 data = self.interferometer.make_scans(scans)
                 for f in range(90):
-                    array[f, y, x] = data[f][1]
+                    self.data[f, y, x] = data[f][1]
             self.stage.go_to_pos(xstart, ystart + y * yres)
-        return array
+        return self.data
 
     def close(self):
         self.magnet_control.close()
