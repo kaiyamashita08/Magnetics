@@ -24,8 +24,16 @@ class Commands:
         self.stage = Stage()
         self.magnet_control.calibrate_magnet()
 
+    '''
+    GENERAL
+    '''
+
     def ready(self):
         return self.magnet_control.get_lockout() and self.interferometer.ready() and self.stage.cmd_ready()
+
+    '''
+    MAGNET
+    '''
 
     @Slot()
     def set_lockout(self, state):
@@ -46,11 +54,22 @@ class Commands:
     def get_magnet_field(self):
         return self.magnet_control.get_field()
 
+    '''
+    INTERFEROMETER
+    '''
+
     def get_data(self):
         return self.data
 
     def save_data(self, name):
         save_array(self.data, name, name)
+
+    '''
+    STAGE
+    '''
+
+    def stage_cmd_ready(self):
+        return self.stage.cmd_ready()
 
     def safe_stop(self):
         self.magnet_control.set_magnet(0)
@@ -64,6 +83,9 @@ class Commands:
 
     def get_y(self):
         return self.stage.get_position()[1]
+
+    def get_position(self):
+        return self.stage.get_position()
 
     def run(self, xlen, ylen, xres, yres, xstart, ystart, flux, scans = 1):
         if not self.ready():

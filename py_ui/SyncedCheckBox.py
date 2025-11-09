@@ -22,6 +22,9 @@ class CheckBoxModel(QObject):
     def set_value(self, new_value):
         self.value = new_value
 
+    def get_value(self):
+        return self._content
+
 
 class SyncedCheckBox(QWidget):
     def __init__(self, model, gui_model: QCheckBox):

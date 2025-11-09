@@ -12,22 +12,19 @@ class GMW5972:
     def __init__(self, dev="Dev2",
                  max_current = 70.0,
                  max_voltage = 85.0,
-                 field_sensor_V_per_T=5.0,
-                 current_per_T=21.8):
-        # TODO: Figure out whether current_per_T is needed
+                 field_sensor_V_per_T=5.0
+                 ):
         """
         Initialize a GMW5972 Controller
         :param dev: The identity of the controller
         :param max_current: The max current of the power supply
         :param max_voltage: The max voltage of the power supply
         :param field_sensor_V_per_T: The voltage per Tesla that the field sensor outputs
-        :param current_per_T: Potentially useless
         """
         self.dev = dev
         self.max_current = max_current
         self.max_voltage = max_voltage
         self.field_gain = field_sensor_V_per_T
-        self.current_per_T = current_per_T
 
         # Analog Outputs
         self.ao = type("AOChannels", (), {})()
